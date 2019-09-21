@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-}
+ }
 
 main {
   width: 85vw;
@@ -10,14 +10,25 @@ main {
   max-width: 1024px;
   margin: 35px auto;
   background: #fff;
+  align-content: center;
   padding: 15px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+ 
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-image:url("https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/16/1524058250-rick-and-morty-portal.jpg?resize=480:*")
+
 }
 
 .grid-view {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  background: black;
 }
 
 .page-view {
@@ -36,4 +47,26 @@ main {
 
 header h1 {
   text-align: center;
+  
+}
+.centered{
+  margin: 0px auto;
+  text-align: center;
+}
+
+
+div.transbox {
+  margin: 30px;
+  background-color: black;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+Link{
+  text-decoration: none;
+}
+div.transbox p {
+  margin: 5%;
+  font-size: 1.2rem;
+  color: white;
 }
