@@ -1,11 +1,15 @@
 import React from "react";
-import Header from "./components/Header.js";
-
+import { Route, Link } from "react-router-dom";
+import WelcomePage from "./components/WelcomePage.js";
+import LocationsList from "./components/LocationsList.js";
+import CharacterList from "./components/CharacterList.js";
 
 export default function App() {
   return (
-    <main>
-      <Header />
-    </main>
+    <div>
+      <Route exact path="/" component={WelcomePage} />
+      <Route exact path="/CharacterList" component={CharacterList} />
+      <Route exact path="/LocationsList" component={LocationsList} />
+    </div>
   );
 }
